@@ -1,11 +1,29 @@
 import os
 
+
+sqlite3_file = 'uifish.db'
+config_file = 'config.yml'
+case_template_file = 'uifish_eg.yml'
+
 object_folders = {
     'suits': None,
     'static': {
-        'screenshots': '{idx}_{timestamp}_{tag}',
-        'videos': '{idx}_{timestamp}_{tag}',
-        'reports': '{idx}_{timestamp}_{tag}.html',
-        'dbs': 'uiFish.db'
+        'screenshots': None,
+        'videos': None,
+        'reports': None,
     }
 }
+
+object_files = {
+    'static': {
+        'dbs': sqlite3_file
+    },
+    config_file: None,
+    'suits': case_template_file
+
+}
+
+video_file_format = '{idx}_{timestamp}_{tag}'
+screenshots_file_format = '{idx}_{timestamp}_{tag}'
+reports_file_format = '{idx}_{timestamp}_{tag}.html'
+
