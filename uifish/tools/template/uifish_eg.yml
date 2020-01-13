@@ -1,0 +1,8 @@
+init:
+    video: true,
+    device_id: '',
+    diff_tag: ''
+click: ''
+input: ''
+drow: ''
+check

@@ -18,7 +18,9 @@ object_files = {
     'static': {
         'dbs': sqlite3_file
     },
-    config_file: None,
+    'config': {
+        config_file: None
+    },
     'suits': case_template_file
 
 }
