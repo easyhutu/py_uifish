@@ -2,8 +2,8 @@ import os
 from uifish.settings import object_folders, object_files
 from uifish.tools.parse_json import to_value, base_keys_tree
 from uifish.tools.template import template_paths
-import sqlite3
 import shutil
+from uifish.core import runner
 
 
 class UiFishInit(object):
@@ -19,7 +19,7 @@ class UiFishInit(object):
         print('success init uifish')
 
     def run(self, path=None):
-        pass
+        runner.run_case(path)
 
     def clear(self):
         pass
