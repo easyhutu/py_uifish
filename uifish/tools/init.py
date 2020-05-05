@@ -18,8 +18,9 @@ class UiFishInit(object):
         self._make_obj_files(path)
         print('success init uifish')
 
-    def run(self, path=None):
-        runner.run_case(path)
+    def run(self, path=None, addr=None, log_level='info'):
+        print(log_level, path)
+        runner.run_case(path=path, addr=addr, log_level=log_level)
 
     def clear(self):
         pass

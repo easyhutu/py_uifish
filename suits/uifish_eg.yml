@@ -1,8 +1,24 @@
 init:
-    video: true,
-    device_id: '',
+    device_id: 226c0c32
+    package: tv.danmaku.bili
+    check_pkg: true
     diff_tag: ''
-click: ''
-input: ''
+step1:
+  sleep: 6
+  press: back
+  click:
+    xpath: //*[@text="追番"]
+step2:
+  click:
+    rid:
+      resourceId: "tv.danmaku.bili:id/expand_search"
+  adb:
+    input: test
+#  input:
+#    xpath: //*[@resource-id="tv.danmaku.bili:id/search_bar"]
+#    val: '22'
+  press: enter
+
+
 drow: ''
-check
+end: true

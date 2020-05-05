@@ -1,5 +1,14 @@
 # 设备ID
-device_id: 'xxx'
+device_id:
+
+# 包名
+package:
+
+# 启动app
+start_app: true
+
+# 安装包
+install:
 
 # mysql DB_URL mysql+pymysql://username:pwd@host/db?charset=utf8mb4 如果是空默认使用本地sqlite3
 DB_URL:

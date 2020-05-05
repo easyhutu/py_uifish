@@ -84,3 +84,33 @@ def to_value(data: dict, keys):
         val = val.get(keys)
 
     return val
+
+
+def change_value(dic_json: dict, kl, v, kb: list = []):
+    if isinstance(dic_json, dict):
+        for key in dic_json:
+            kb.append(key)
+            if key == kl[-1] and _can_path(kb, kl):
+                dic_json[key] = v
+            elif isinstance(dic_json[key], dict):
+                change_value(dic_json[key], kl, v, kb)
+
+
+def _can_path(a: list, b: list):
+    if a[-1] == b[-1]:
+        c = []
+        a.reverse()
+        for idx, i in enumerate(a):
+            if i in b:
+                c.append(i)
+        c.reverse()
+        if c[-len(b):] == b:
+            return True
+    return
+
+
+a = {'init': {'device_id': '', 'diff_tag': ''}, 'step1': {'click': {'xpath': '/sfsf/sfsf'}},
+     'step2': {'click': {'img': 'D:\\pro\\py_uifish\\suits\\_img\\eglogo.png'}}, 'input': '', 'drow': ''}
+
+change_value(a, ['step1', 'xpath'], 'aaaaaaaa')
+print(a)
