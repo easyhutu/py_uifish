@@ -20,7 +20,7 @@ opencv-python==4.2.0.34
 packaging==20.0
 Pillow==7.0.0
 progress==1.5
-py==1.8.1
+py==1.10.0
 pyelftools==0.26
 pyparsing==2.4.6
 PyYAML==5.3
